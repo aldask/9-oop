@@ -1,12 +1,13 @@
 const Bird = require('./Bird.js');
 
-class Parrot extends Bird {
+class Dragon extends Bird {
     constructor(name, color) {
         super(name, color);
         this.sound = 'I am a captain ' + name;
         this.wingsCount = 2;
         this.canFly = true;
+        this.imposter = true;
     }
 }
 
-module.exports = Parrot;
+module.exports = Dragon;

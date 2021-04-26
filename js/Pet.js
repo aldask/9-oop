@@ -1,22 +1,9 @@
-/*
-Pet:
-- parametrus: name, color, sound
-- metodai: voice, introduce
-*/
+const Animals = require('./Animals.js');
 
-class Pet {
+class Pet extends Animals {
     constructor(name, color) {
-        this.name = name;
-        this.color = color;
-        this.sound = 'Au miau nom';
-    }
-
-    voice() {
-        console.log(`${this.name}: ${this.sound}!`);
-    }
-
-    introduce() {
-        console.log(`As esu ${this.name}, mano kailis ${this.color} ir moku sakyti "${this.sound}".`);
+        super(name, color);
+        this.sound = 'pet';
     }
 }
 

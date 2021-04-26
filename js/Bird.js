@@ -1,31 +1,17 @@
-/*
-Bird:
-- parametrus: name, color, sound, wingsCount, canFly
-- metodai: voice, introduce, flyAway
-*/
+const Animals = require('./Animals.js');
 
-class Bird {
+class Bird extends Animals {
     constructor(name, color) {
-        this.name = name;
-        this.color = color;
-        this.sound = 'Cip captain';
+        super(name, color);
+        this.sound = 'Pur pur';
         this.wingsCount = 2;
         this.canFly = true;
     }
-
-    voice() {
-        console.log(`${this.name}: ${this.sound}!`);
-    }
-
-    introduce() {
-        console.log(`As esu ${this.name}, mano kailis ${this.color} ir moku sakyti "${this.sound}".`);
-    }
-
     flyAway() {
         if (this.canFly) {
-            console.log(`${this.name}: flew away...`);
+            console.log(`${this.name}: Flew away`);
         } else {
-            console.log(`${this.name}: can not fly away :(`);
+            console.log(`${this.name}: Cannot fly away`);
         }
     }
 }
